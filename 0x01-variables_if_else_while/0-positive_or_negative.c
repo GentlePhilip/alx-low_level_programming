@@ -1,26 +1,45 @@
-#include <stdlib.h>
-#include <time.h>
-/* more headers goes there */
 #include <stdio.h>
-/* betty style doc for function main goes there */
+#include<stdio.h>
+
 /**
- * main - main function
+ * main - Entry point
  *
- * Return: always 0
+ * Return: Always 0 (success)
  */
+ * Description: print 0, 1, - 9
+ *
+ * Return: Always 0 (Success)
+*/
+
 int main(void)
 {
-	int n;
+    int a;
+    for (a = 0; a < 10; a++)
+    {
+        putchar(a + '0');
+        if (a < 9)
+        {
+            putchar(',');
+            putchar(' ');
+        }
+    }
+    putchar('\n');
+    return (0);
+	int digit = 0;
 
-	srand(time(0));
-	n = rand() - RAND_MAX / 2;
-	/* your code goes there */
-	if (n > 0)
-		printf("%d is positive", n);
-	else if (n = 0)
-		printf("%d is zero", n);
-	else 
-		printf("%d is negative", n);
-	printf("\n");
+	while (digit <= 9)
+	{
+		putchar(digit + 48);
+
+		if (digit != 9)
+		{
+			putchar(',');
+			putchar(' ');
+		}
+
+		++digit;
+	}
+	putchar('\n');
+
 	return (0);
 }
