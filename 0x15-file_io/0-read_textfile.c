@@ -3,12 +3,11 @@
 
 /**
  * read_textfile - it Reads text files and prints it to POSIX standard output.
- * @filename: A pointer to the name of the file it should create.
- * @letters: The function must read and as well print the number of letters.
+ * @filename: A pointer to the name of the file.
+ * @letters:The function must read and as well print the number of letters.
  *
- *
- * Return: 0 if the function fails and which means the filename is NULL
- *         O/w - this also shows  the actual number of bytes the function can read and print at the same time.
+ * Return: w- actual number of bytes read and printed
+ *        0 when function fails or filename is NULL.
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
@@ -37,3 +36,4 @@ ssize_t read_textfile(const char *filename, size_t letters)
 
 	return (w);
 }
+
